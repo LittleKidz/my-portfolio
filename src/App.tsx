@@ -427,6 +427,28 @@ export default function DeveloperLanding() {
           </motion.section>
         )}
       </AnimatePresence>
+      {/* ===== FULLSCREEN IMAGE MODAL ===== */}
+      <AnimatePresence>
+        {activeImage && (
+          <motion.div
+            className="fixed inset-0 z-[999] bg-black/80 flex items-center justify-center px-6"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setActiveImage(null)} // คลิกพื้นหลัง = ปิด
+          >
+            <motion.img
+              src={activeImage}
+              className="max-w-full max-h-[90vh] rounded-2xl shadow-2xl cursor-zoom-out"
+              initial={{ scale: 0.85, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.85, opacity: 0 }}
+              transition={{ type: "spring", stiffness: 120 }}
+              onClick={(e) => e.stopPropagation()} // ⭐ สำคัญ
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
