@@ -120,7 +120,18 @@ export default function DeveloperLanding() {
           {...buttonHover}
           {...backButtonFloat}
           onClick={() => setPage("main")}
-          className="fixed top-6 left-6 z-50 bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-xl shadow-lg"
+          className="
+  fixed
+  top-3 left-3
+  mini:top-4 mini:left-4
+  md:top-6 md:left-6
+  text-xs mini:text-sm
+  z-50
+  bg-gray-800 hover:bg-gray-700
+  text-white
+  px-3 py-2
+  rounded-xl shadow-lg
+"
         >
           Back to Main Menu
         </motion.button>
@@ -136,7 +147,18 @@ export default function DeveloperLanding() {
             animate="animate"
             exit="exit"
             transition={{ duration: 0.5 }}
-            className="relative min-h-screen flex flex-col items-center justify-center px-6 md:px-16 pt-24 text-center overflow-hidden"
+            className="
+  relative
+  min-h-screen
+  flex flex-col
+  items-center
+  justify-start
+  md:justify-center
+  px-4 mini:px-5 sm:px-6 md:px-16
+  pt-20 mini:pt-24
+  text-center
+  overflow-hidden
+"
           >
             {/* Background */}
             <div className="absolute inset-0 bg-gradient-to-b from-slate-900 to-slate-800" />
@@ -154,7 +176,7 @@ export default function DeveloperLanding() {
             />
 
             {/* Coding particles */}
-            {renderParticles()}
+            <div className="hidden mini:block">{renderParticles()}</div>
 
             {/* Hero Text */}
             <motion.h1
@@ -162,15 +184,16 @@ export default function DeveloperLanding() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="
-    text-4xl 
-    sm:text-5xl 
-    md:text-6xl 
-    font-bold
-    text-white
-    text-center
-    relative z-10
-    mb-6
-  "
+  text-[26px]
+  mini:text-4xl
+  sm:text-5xl
+  md:text-6xl
+  leading-tight
+  break-words
+  font-bold
+  relative z-10
+  mb-6
+"
             >
               <span className="text-sky-400">Worasret </span>Kulkit
             </motion.h1>
@@ -180,27 +203,38 @@ export default function DeveloperLanding() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
               className="
-    max-w-lg
-    text-base
-    sm:text-lg
-    text-slate-300
-    mt-2
-    leading-relaxed
-    mb-10
-    px-2
-  "
+  max-w-full
+  mini:max-w-lg
+  text-sm
+  mini:text-base
+  sm:text-lg
+  text-slate-300
+  px-2
+  mb-8
+  leading-relaxed
+  relative z-10
+"
             >
               Computer Engineering Student Interested in AI, Computer Vision,
               and Software Development
             </motion.p>
 
             {/* Buttons Hero ลอย ๆ */}
-            <div className="flex flex-col gap-4 w-full max-w-xs sm:max-w-none">
+            <div className="flex flex-col gap-4 z-10 relative w-full max-w-[260px] mini:max-w-xs mx-auto">
               <motion.button
                 {...buttonHover}
                 {...heroButtonFloat}
                 onClick={() => setPage("achievement")}
-                className="w-full sm:w-auto bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 rounded-xl font-medium shadow-xl"
+                className="
+  w-full
+  sm:w-auto
+  bg-blue-600 hover:bg-blue-500
+  text-white
+  px-6 py-3
+  rounded-xl
+  font-medium
+  shadow-xl
+"
               >
                 Achievement
               </motion.button>
@@ -208,7 +242,16 @@ export default function DeveloperLanding() {
                 {...buttonHover}
                 {...heroButtonFloat}
                 onClick={() => setPage("project")}
-                className="bg-purple-600 hover:bg-purple-500 text-white px-6 py-3 rounded-xl font-medium shadow-xl"
+                className="
+  w-full
+  sm:w-auto
+  bg-blue-600 hover:bg-blue-500
+  text-white
+  px-6 py-3
+  rounded-xl
+  font-medium
+  shadow-xl
+"
               >
                 Project
               </motion.button>
@@ -217,22 +260,25 @@ export default function DeveloperLanding() {
             {/* Contact Section */}
             <div
               className="
-    absolute bottom-6
-    flex
-    flex-col
-    md:flex-row
-    gap-4
-    px-4
-    w-full
-    md:w-auto
+    mt-10
+    flex flex-col gap-3
+    px-4 w-full
     items-center
+    relative z-10
+
+    md:absolute
+    md:bottom-10
+    md:left-1/2
+    md:-translate-x-1/2
+    md:flex-row
+    md:w-auto
   "
             >
-              <div className="w-full md:w-auto flex items-center justify-center gap-2 px-4 py-3 rounded-xl gap-2 px-6 py-3 rounded-xl bg-blue-500 text-white font-semibold shadow-lg">
+              <div className="w-full md:w-auto flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-blue-500 text-white font-semibold shadow-lg">
                 <Mail size={20} />
                 wratmkulkic74@gmail.com
               </div>
-              <div className="w-full md:w-auto flex items-center justify-center gap-2 px-4 py-3 rounded-xl gap-2 px-6 py-3 rounded-xl bg-green-500 text-white font-semibold shadow-lg">
+              <div className="w-full md:w-auto flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-green-500 text-white font-semibold shadow-lg">
                 <Phone size={20} />
                 +66 649185760
               </div>
@@ -241,7 +287,7 @@ export default function DeveloperLanding() {
                 href="https://github.com/LittleKidz"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full md:w-auto flex items-center justify-center gap-2 px-4 py-3 rounded-xl gap-2 px-6 py-3 rounded-xl bg-gray-800 text-white font-semibold shadow-lg hover:bg-gray-700 transition"
+                className="w-full md:w-auto flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-gray-800 text-white font-semibold shadow-lg hover:bg-gray-700 transition"
               >
                 <Github size={20} />
                 GitHub
@@ -251,7 +297,7 @@ export default function DeveloperLanding() {
                 href="https://www.linkedin.com/in/worasret-kulkit-403059394/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full md:w-auto flex items-center justify-center gap-2 px-4 py-3 rounded-xl gap-2 px-6 py-3 rounded-xl bg-blue-700 text-white font-semibold shadow-lg hover:bg-blue-600 transition"
+                className="w-full md:w-auto flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-blue-700 text-white font-semibold shadow-lg hover:bg-blue-600 transition"
               >
                 <Linkedin size={20} />
                 LinkedIn
