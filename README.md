@@ -2,7 +2,7 @@
 
 This repository contains my personal portfolio website, built to showcase my projects, skills, and interests as a Computer Engineering student with a focus on Software Development.
 
-🔗 https://worasretkulkit.vercel.app/
+🔗 https://worasretfolio.vercel.app/
 
 ---
 
