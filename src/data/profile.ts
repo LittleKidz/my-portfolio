@@ -9,7 +9,7 @@ export const profile = {
   github: "https://github.com/LittleKidz",
   linkedin: "https://www.linkedin.com/in/worasret-kulkit-403059394/",
   photo: "/me.jpg",
-  resume: "/Resume.pdf",
+  resume: "/resume.pdf",
   education: {
     degree: "Bachelor of Engineering",
     major: "Computer Engineering and Digital Technology",
