@@ -1,38 +1,67 @@
-# Personal Portfolio Website
+# Worasret Kulkit — Portfolio
 
-This repository contains my personal portfolio website, built to showcase my projects, skills, and interests as a Computer Engineering student with a focus on Software Development.
+A modern, responsive portfolio website built with **React**, **TypeScript**, **Tailwind CSS**, and **Framer Motion**.
 
-🔗 https://worasretfolio.vercel.app/
+## Tech Stack
 
----
+- **Framework:** React 18 + TypeScript
+- **Styling:** Tailwind CSS 3
+- **Animations:** Framer Motion
+- **Icons:** Lucide React
+- **Build Tool:** Vite 6
 
-## 📌 Overview
+## Getting Started
 
-This portfolio website presents:
-- My technical background and interests
-- Selected projects and experiences
-- Skills related to software development and engineering
-- Contact and profile links (GitHub, etc.)
+```bash
+# Install dependencies
+npm install
 
-The website is designed to be clean, responsive, and easy to navigate, with a focus on clarity and usability.
+# Start dev server
+npm run dev
 
----
+# Build for production
+npm run build
 
-## 🛠 Tech Stack
+# Preview production build
+npm run preview
+```
 
-- **Frontend Framework:** React
-- **Build Tool:** Vite
-- **Styling:** Tailwind CSS
-- **Language:** JavaScript (ES6+)
-- **Version Control:** Git & GitHub
-- **Deployment:** Vercel
+## File Structure
 
----
+```
+src/
+├── components/
+│   ├── ui/                  # Reusable UI primitives
+│   │   ├── SectionHeading.tsx
+│   │   └── TechBadge.tsx
+│   ├── Navbar.tsx           # Sticky navigation
+│   ├── Hero.tsx             # Landing section
+│   ├── About.tsx            # Bio & education
+│   ├── Skills.tsx           # Tech stack grid
+│   ├── Projects.tsx         # Project showcase
+│   ├── Achievements.tsx     # Awards timeline
+│   ├── Contact.tsx          # Contact CTA
+│   └── Footer.tsx           # Footer
+├── data/
+│   └── profile.ts           # All personal data (single source of truth)
+├── hooks/
+│   └── useInView.ts         # Intersection Observer hook
+├── App.tsx                  # Root component
+├── main.tsx                 # Entry point
+└── index.css                # Global styles
+```
 
-## ✨ Features
+## Customization
 
-- Responsive layout for different screen sizes
-- Component-based structure using React
-- Clean and minimal UI with Tailwind CSS
-- Project showcase section with descriptions and visuals
-- Fast build and development workflow using Vite
+All personal data (name, skills, projects, achievements, contact) is centralized in `src/data/profile.ts`. Edit this single file to update your portfolio content.
+
+## Deployment
+
+Build and deploy to any static hosting:
+
+```bash
+npm run build
+# Deploy the `dist/` folder
+```
+
+Compatible with **Vercel**, **Netlify**, **GitHub Pages**, and **Cloudflare Pages**.
