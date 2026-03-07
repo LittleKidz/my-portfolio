@@ -1,3 +1,4 @@
+import type { LucideIcon } from "lucide-react";
 import { motion } from "framer-motion";
 import {
   Monitor,
@@ -10,7 +11,7 @@ import {
 import SectionHeading from "./ui/SectionHeading";
 import { skillCategories } from "../data/profile";
 
-const iconMap: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
+const iconMap: Record<string, LucideIcon> = {
   monitor: Monitor,
   server: Server,
   database: Database,

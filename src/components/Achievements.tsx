@@ -1,10 +1,11 @@
+import type { LucideIcon } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Award, Medal, Star, X } from "lucide-react";
 import SectionHeading from "./ui/SectionHeading";
 import { achievements } from "../data/profile";
 
-const typeConfig: Record<string, { icon: React.ComponentType<{ size?: number; className?: string }>; color: string; label: string }> = {
+const typeConfig: Record<string, { icon: LucideIcon; color: string; label: string }> = {
   gold: { icon: Medal, color: "text-yellow-400", label: "Gold Medal" },
   silver: { icon: Medal, color: "text-slate-300", label: "Silver Medal" },
   bronze: { icon: Medal, color: "text-amber-600", label: "Runner-Up" },
