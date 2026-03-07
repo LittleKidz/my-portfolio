@@ -2,7 +2,7 @@
 
 A modern, high-performance personal portfolio built to showcase my work in full-stack development, backend engineering, and AI-powered computer vision. Designed with a focus on clean architecture, responsive design, and recruiter-ready presentation.
 
-**Live Site:** [worasret.vercel.app](https://worasret.vercel.app)
+**Live Site:** [worasretfolio.vercel.app](https://worasretfolio.vercel.app)
 
 
 ---
